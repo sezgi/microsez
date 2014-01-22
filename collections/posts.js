@@ -61,9 +61,3 @@ Meteor.methods({
     });
   }
 });
-
-EasySearch.createSearchIndex('posts', {
-    'collection'    : Posts,         // instanceof Meteor.Collection
-    'field'         : 'title',    // can also be an array of fields
-    'limit'         : 20,           // default: 10
-});

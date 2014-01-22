@@ -6,7 +6,7 @@
       "spin": {},
       "accounts-ui-bootstrap-dropdown": {},
       "iron-router-progress": {},
-      "easy-search": {}
+      "Bootstrap3-Typeahead": {}
     },
     "packages": {
       "iron-router": {
@@ -29,10 +29,10 @@
         "tag": "v0.2.0",
         "commit": "ce730d1d26feadb7c75ea25f22c5bfdb0c549a8b"
       },
-      "easy-search": {
-        "git": "https://github.com/matteodem/meteor-easy-search.git",
-        "tag": "v0.2.4",
-        "commit": "7dad5f23e99acc75b34b0af7e00574729ba3225f"
+      "Bootstrap3-Typeahead": {
+        "git": "https://github.com/JustinSGray/meteor-Bootstrap-3-Typeahead.git",
+        "tag": "v0.1.1",
+        "commit": "770b69d73e559c9f6506daa0a034acab21169479"
       }
     }
   }
