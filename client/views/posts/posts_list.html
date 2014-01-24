@@ -1,15 +1,19 @@
 <template name="postsList">
-  <div class="currentPost">
-    <h3>Random</h3>
-  </div>
-  <div class="posts">
-    <h3>List</h3>
-    {{#each postsWithRank}}
-      {{> postItem}}
-    {{/each}}
-    {{#if hasMorePosts}}
-       <a class="load-more" href="{{nextPath}}">Load more</a>
-     {{/if}}
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="hidden-phone span2 posts">
+        <h3>List</h3>
+        {{#each postsWithRank}}
+          {{> postItem}}
+        {{/each}}
+        {{#if hasMorePosts}}
+           <a class="load-more" href="{{nextPath}}">Load more</a>
+         {{/if}}
+      </div>
+      <div class="span10 currentPost">
+        <h3>Random</h3>
+      </div>
+    </div>
   </div>
 </template>
 

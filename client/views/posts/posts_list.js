@@ -17,7 +17,7 @@ Template.postsList.helpers({
 Template.postsList.rendered = function () {
   HTTP.call("GET", Router.routes['randomPost'].path(), {}, function (error, response) {
       if (!error) {
-        var html = Template.postItem($.parseJSON(response.content)[0]);
+        var html = Template.postPage($.parseJSON(response.content)[0]);
         $('.currentPost').append(html);
       }
   });
