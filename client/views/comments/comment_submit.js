@@ -13,6 +13,9 @@ Template.commentSubmit.events({
         throwError(error.reason);
       } else {
         $body.val('');
+        if (Session.get('highlightCommentId')) {
+          Session.set('highlightCommentId', commentId);
+        }
       }
     });
   }

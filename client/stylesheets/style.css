@@ -67,8 +67,15 @@ body {
 }
 .comment .upvote {
     display: block;
-    margin: 7px 12px 0 0;
+}
+.comment .votes-wrap {
+    margin: 0 12px 0 0;
     float: left;
+}
+.comment .votes {
+    font-size: 11px;
+    text-align: center;
+    color: #888;
 }
 .comment h4 a { font-size: 12px }
 .comment p:last-child { margin-bottom: 0 }

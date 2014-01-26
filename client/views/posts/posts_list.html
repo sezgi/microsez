@@ -11,6 +11,13 @@
          {{/if}}
       </div>
       <div class="span10 currentPost">
+        {{#if randomPost}}
+          {{#with randomPost}}
+            {{> postPage }}
+          {{/with}}
+        {{else}}
+          {{> loading}}
+        {{/if}}
       </div>
     </div>
   </div>

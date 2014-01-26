@@ -37,7 +37,7 @@ Template.header.rendered = function () {
       },
       matcher: function () { return true; },
       updater: function (item) {
-        Router.go(Router.routes['postPage'].path({ _id: postsMap[item] }))
+        Router.go('postPage', { _id: postsMap[item] })
         return item;
       }
   });
