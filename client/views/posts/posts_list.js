@@ -19,7 +19,7 @@ Template.postsList.rendered = function () {
       if (!error) {
         var post = $.parseJSON(response.content)[0],
             html = $(Template.postPage(post));
-        $('.currentPost').append(html);
+        $('.currentPost').html(html);
       }
   });
 };
