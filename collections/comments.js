@@ -14,7 +14,9 @@ Meteor.methods({
     comment = _.extend(_.pick(commentAttributes, 'postId', 'body'), {
       userId: user._id,
       author: user.username,
-      submitted: new Date().getTime()
+      submitted: new Date().getTime(),
+      upvoters: [],
+      votes: 0
     });
 
     // update the post with the number of comments
@@ -25,5 +27,19 @@ Meteor.methods({
     // now create a notification, informing the user that there's been a comment
     createCommentNotification(comment);
     return comment._id;
+  },
+
+  upvote: function(commentId) {
+    var user = Meteor.user();
+    // ensure the user is logged in
+    if (!user)
+      throw new Meteor.Error(401, "You need to login to upvote");
+    Comments.update({
+      _id: commentId, 
+      upvoters: {$ne: user._id}
+    }, {
+      $addToSet: {upvoters: user._id},
+      $inc: {votes: 1}
+    });
   }
 });

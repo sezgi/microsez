@@ -5,6 +5,11 @@
       {{> comment}}
     {{/each}}
   </ul>
+
+  {{#if truncated}}
+    <a href="{{ pathFor 'postPage' }}" class="load-more">See all comments</a>
+  {{/if}}
+
   {{#if currentUser}}
     {{> commentSubmit}}
   {{else}}

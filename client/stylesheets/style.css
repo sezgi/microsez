@@ -1,4 +1,4 @@
-.grid-block, .main, .post, .comments li, .comment-form {
+.grid-block, .main, .comment, .comment-form {
     background: #fff;
     border-radius: 3px;
     padding: 10px;
@@ -23,6 +23,7 @@ body {
     transition: all 300ms 0ms ease-in;
     position: relative;
     opacity: 1;
+    margin: 10px 0;
 }
 .post:before, .post:after {
     content: "";
@@ -30,11 +31,6 @@ body {
 }
 .post:after { clear: both }
 .post.invisible { opacity: 0 }
-.post .upvote {
-    display: block;
-    margin: 7px 12px 0 0;
-    float: left;
-}
 .post .post-content { float: left }
 .post .post-content h3 {
     margin: 0;
@@ -61,16 +57,21 @@ body {
     list-style-type: none;
     margin: 0;
 }
-.comments li h4 {
+.comment h4 {
     font-size: 16px;
     margin: 0;
 }
-.comments li h4 .date {
+.comment h4 .date {
     font-size: 12px;
     font-weight: normal;
 }
-.comments li h4 a { font-size: 12px }
-.comments li p:last-child { margin-bottom: 0 }
+.comment .upvote {
+    display: block;
+    margin: 7px 12px 0 0;
+    float: left;
+}
+.comment h4 a { font-size: 12px }
+.comment p:last-child { margin-bottom: 0 }
 .dropdown-menu span {
     display: block;
     padding: 3px 20px;

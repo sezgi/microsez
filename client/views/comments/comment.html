@@ -1,6 +1,8 @@
 <template name="comment">
-  <li>
+  <li class="comment">
+    <a href="#" class="upvote btn {{upvotedClass}}">⬆</a>
     <h4>
+      <span class="votes">{{pluralize votes "Vote"}}</span>
       <span class="author">{{author}}</span>
       <span class="date">on {{submittedText}}</span>
     </h4>
