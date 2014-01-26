@@ -1,20 +1,11 @@
 <template name="postPage">
   {{> postItem}}
 
-  {{#if highlightComment}}
-    <ul class="comments">
-      {{#with highlightComment}}
-        {{> comment}}
-      {{/with}}
-    </ul>
-    <a href="{{ pathFor 'postPage' }}" class="load-more">See all comments</a>
-  {{else}}
-    <ul class="comments">
-      {{#each comments}}
-        {{> comment}}
-      {{/each}}
-    </ul>
-  {{/if}}
+  <ul class="comments">
+    {{#each comments}}
+      {{> comment}}
+    {{/each}}
+  </ul>
 
   {{#if currentUser}}
     {{> commentSubmit}}

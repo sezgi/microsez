@@ -1,0 +1,17 @@
+<template name="postPageHighlight">
+  {{> postItem}}
+
+  <ul class="comments">
+    {{#with highlightComment}}
+      {{> comment }}
+    {{/with}}
+  </ul>
+  <a href="{{ pathFor 'postPage' }}" class="load-more">See all comments</a>
+
+  {{#if currentUser}}
+    {{> commentSubmit}}
+  {{else}}
+    <p>Please log in to leave a comment.</p>
+  {{/if}}
+</template>
+

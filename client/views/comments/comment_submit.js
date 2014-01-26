@@ -16,6 +16,9 @@ Template.commentSubmit.events({
         if (Session.get('highlightCommentId')) {
           Session.set('highlightCommentId', commentId);
         }
+        setTimeout(function() {
+          $('.comment').addClass('animated fadeInUp');
+        }, 0);
       }
     });
   }
